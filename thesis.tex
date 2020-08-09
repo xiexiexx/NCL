@@ -1,0 +1,53 @@
+\documentclass[fancyhdr, oneside, UTF8, openany]{ctexbook}
+
+\usepackage[a4paper, left=2.1cm, right=2.1cm, top=2.1cm, bottom=2.1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{xurl}
+
+\input{NCL.def}
+
+\begin{document}
+
+% 封面导入, 可使用其他排版软件生成的PDF(可包含多页).
+\includepdf[pages=-]{cover.pdf}
+
+% 目录
+\pagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+% 摘要
+\input{abstract}
+
+% 正文部分设定
+\newpage
+\pagestyle{fancy}
+\fancyhead[L,R]{}
+\fancyhead[C]{\header}
+\fancyfoot[C]{\thepage}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% 九章
+\input{chapter1}
+\input{chapter2}
+\input{chapter3}
+\input{chapter4}
+\input{chapter5}
+\input{chapter6}
+\input{chapter7}
+\input{chapter8}
+\input{chapter9}
+
+\input{acknowledgement}
+\input{references}
+
+\end{document}

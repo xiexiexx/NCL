@@ -1,0 +1,10 @@
+\renewcommand\CJKecglue{}
+
+\ctexset{
+  today=old,
+  chapter={
+    name={第,章},
+    format+=\LARGE,
+    number=\arabic{chapter}}}
+
+\def\header{九章论文}
