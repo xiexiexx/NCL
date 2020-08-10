@@ -1,3 +1,6 @@
+\geometry{a4paper, left=2.1cm, right=2.1cm, top=2.1cm, bottom=2.1cm}
+\captionsetup{labelsep=quad}
+
 \renewcommand\CJKecglue{}
 
 \ctexset{
