@@ -9,14 +9,8 @@
 
 \def\header{九章论文}
 
-\newcommand\printabstract{
-    \addcontentsline{toc}{chapter}{摘要}
+\newcommand\printabstractname[2]{
+    \addcontentsline{toc}{chapter}{#1}
     \begin{center}
-    \LARGE\heiti{}摘要
-    \end{center}}
-
-\newcommand\printenglishabstract{
-    \addcontentsline{toc}{chapter}{ABSTRACT}
-    \begin{center}
-    \LARGE\textbf{ABSTRACT}
+    \LARGE#2{}#1
     \end{center}}
