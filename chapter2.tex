@@ -1,7 +1,23 @@
 \chapter{文字}
 
-书写
+\section{举例}
 
+  书写, 用心.
+
+  段之间以空行分隔.
+
+% 偶有必要可以设置下一页.
 \newpage
 
-用心
+\section{代码抄录}
+
+可以直接列出代码(设定缩进距离为2, 每行编号并从0开始):
+\begin{Verbatim}[tabsize=2,numbers=left,firstnumber=0]
+for (int i = 0; i < n; ++i)
+	for (int j = 0; j < n; ++j)
+    cout << i * j << ' ';
+\end{Verbatim}
+
+	也可以使用\texttt{VerbatimInput}命令直接包含代码文件。
+
+	代码变量是\texttt{i}，复杂的是\Verb@int i = 0@。
