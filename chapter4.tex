@@ -1,8 +1,35 @@
 \chapter{图片}
 
-\begin{figure}[!hbtp]
+  一般采用浮动的图, 以选项\texttt{[!htbp]}标记, 如图\ref{fig:algorithm}所示,
+注意其中还有两个子图\ref{fig:algorithm:a}和\ref{fig:algorithm:b}.
+
+\begin{figure}[!htbp]
+\centering
+\begin{subfigure}[t]{.3\textwidth}
+  \centering
+  \includegraphics[width=.95\textwidth]{books.jpg}
+  \caption{算法}
+  \label{fig:algorithm:a}
+\end{subfigure}
+\quad
+\begin{subfigure}[t]{.3\textwidth}
+  \centering
+  \includegraphics[width=.95\textwidth]{books.jpg}
+  \caption{还是算法}
+  \label{fig:algorithm:b}
+\end{subfigure}
+\caption{主图}
+\label{fig:algorithm}
+\end{figure}
+
+
+  如果有特殊的需要, 可以用固定位置的图片, 在后面加上\texttt{[h]}选项即可, 例如图\ref{fig:books}。
+
+\begin{figure}[h]
     \centering
     \includegraphics[width=.8\textwidth]{books.jpg}
     \caption{算法三部曲.}
     \label{fig:books}
 \end{figure}
+
+  当然也不一定能够完全在当前位置, 可能当前位置不够会挤到下一页.

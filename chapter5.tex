@@ -1,5 +1,12 @@
 \chapter{表格}
 
+
+  一般采用浮动的表格, 以选项\texttt{[!htbp]}标记, 注意表格不能写``如下所示''
+要写``如\ref{table:trilogy}所示''.
+
+
+  表\ref{tab:trilogy}使用了单元格不同位置的标记(例如\texttt{c}/\texttt{l}/\texttt{r}标记).
+
 \begin{table}[!hbtp]
 \centering
 \begin{tabular}{|c|l|r|}
@@ -13,3 +20,37 @@
 \caption{算法三部曲}
 \label{tab:trilogy}
 \end{table}
+
+
+  表\ref{tab:number}下面还有子表\ref{tab:number:d}和\ref{tab:number:b}, 注意命名不同.
+
+\begin{table}[!htb]
+\centering
+  \caption{主表}
+  \label{tab:number}
+\begin{subtable}[t]{2in}
+  \centering
+  \begin{tabular}{|l|l|l|l|}
+  \hline
+  0 & 1 & 2 & 3 \\
+  \hline
+  4 & 5 & 6 & 7 \\
+  \hline
+  \end{tabular}
+  \caption{子表(十进制)}\label{tab:number:d}
+\end{subtable}
+\quad
+\begin{subtable}[t]{2in}
+  \centering
+  \begin{tabular}{|l|l|l|l|}
+  \hline
+  000 & 001 & 010 & 011 \\
+  \hline
+  100 & 101 & 110 & 111 \\
+  \hline
+  \end{tabular}
+  \caption{子表(二进制)}\label{tab:number:b}
+\end{subtable}
+\end{table}
+
+最好要把每一页填满，这样排版问题会少很多。

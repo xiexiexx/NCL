@@ -1,19 +1,22 @@
 \geometry{a4paper, left=2.1cm, right=2.1cm, top=2.1cm, bottom=2.1cm}
 \captionsetup{labelsep=quad}
 
-\renewcommand\CJKecglue{}
+\renewcommand\CJKecglue{\hspace{0.064em}}
 
 \ctexset{
   today=old,
   chapter={
+    pagestyle=fancy,
     name={第,章},
     format+=\LARGE,
     number=\arabic{chapter}}}
 
+\newcommand\echapter[1]{\chapter{#1}\thispagestyle{empty}}
+
 \def\header{九章论文}
 
 \newcommand\printabstractname[2]{
-    \addcontentsline{toc}{chapter}{#1}
+  \addcontentsline{toc}{chapter}{#1}
     \begin{center}
-    \LARGE#2{}#1
+      \LARGE#2{}#1
     \end{center}}

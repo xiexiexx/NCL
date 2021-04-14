@@ -1,6 +1,12 @@
 \chapter{公式}
 
+  最常见的是行内公式, 例如集合$X$中的元素$a$, 初学者容易直接使用普通符号而不是数学模式.
+另外一个问题是斜体, 最好使用\emph{斜体}方式.
+
+  行间公式一般带编号, 我们可使用\texttt{label}引用, 例如公式\ref{eq:log_factorial}给出了渐近记号.
 \begin{equation}
 \label{eq:log_factorial}
 \log(n!) = \Theta(n\log{n})
 \end{equation}
+
+  注意写一段就编译一段, 这样容易查错, 特别是公式.

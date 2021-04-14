@@ -1,4 +1,4 @@
-\documentclass[fancyhdr, oneside, UTF8, openany]{ctexbook}
+\documentclass[oneside, UTF8, openany]{ctexbook}
 
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -7,10 +7,12 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{tabularx}
-\usepackage{fancyhdr}
 \usepackage{pdfpages}
 \usepackage{xurl}
 \usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{fancyhdr}
 
 % 各种参数的设定(包括宏包的设定).
 \input{NCL.def}
@@ -32,11 +34,12 @@
 % 正文部分设定.
 \newpage
 \pagestyle{fancy}
-\fancyhead[L,R]{}
-\fancyhead[C]{\header}
-\fancyfoot[C]{\thepage}
-\pagenumbering{arabic}
-\setcounter{page}{1}
+\fancyhf{}
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+  \fancyhead[L,R]{}
+  \fancyhead[C]{\header}
+  \fancyfoot[C]{\small\thepage}
 
 % 九章.
 \input{chapter1}
