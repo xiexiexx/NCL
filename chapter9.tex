@@ -1,1 +1,40 @@
 \chapter{进阶}
+
+\section{Mac篇}
+
+我们给出一些设定方法, 在某些特定需求下可供选用.
+
+\subsubsection{小技巧}
+
+\begin{itemize}
+    \item   使用TeXShop时清理aux文件有时候没法处理子目录, 
+    特别是使用了\verb@\include@命令时. 在终端输入\verb@defaults write TeXShop AggressiveTrashAUX YES@即可.
+\end{itemize}
+
+\subsubsection{iCloud同步问题}
+
+如果要在iCloud上试一下\LaTeX{}项目同步, 但是每次编译产生的中间文件很多, 会频繁地引起不必要的数据读写, 影响效率.
+为了避免这个问题, 在Mac上找到我用的XeLaTeX命令, 也即文件:
+\begin{Verbatim}
+~/Library/TeXShop/Engines/XeLaTeX.engine
+\end{Verbatim}
+复制到当前文件夹改名\verb@CLOUD.engine@, 以后编译使用可在\verb@typeset@里选择这个\verb@CLOUD@执行. 
+我们想把这些中间文件放到\verb@/Users/x/TMP@下, 这样即可在本地处理. 如果项目有多个文件夹且用\verb@\include@命令包含文件, 
+暂时文件夹里得仿照文件结构新建若干空文件夹, 否则会报错.
+
+\verb@CLOUD.engine@应改为:
+\begin{Verbatim}
+#!/bin/tcsh
+
+set path= ($path /Library/TeX/texbin /usr/texbin /usr/local/bin)
+xelatex -output-directory=/Users/x/TMP -file-line-error -synctex=1 "$1"
+open -a TeXShop /Users/x/TMP/`echo $1 | sed 's/\(.*\)\..*/\1\.pdf/'`
+\end{Verbatim}
+上述方案来自\url{https://tex.stackexchange.com/questions/67211/use-texshop-preview-window-when-different-output-dir-is-set}, 
+不过他使用的是\verb@bash@而不是XeLaTeX原先使用的\verb@tcsh@, 因此代码中会用到
+\begin{Verbatim}
+open -a TeXShop /Users/x/TMP/$(echo $1 | sed 's/\(.*\)\..*/\1\.pdf/')
+\end{Verbatim}
+当然也可以使用\verb@latexmk@解决方案. 
+
+不过从整体上来说, iCloud方案还是有点麻烦, 不太建议使用.
