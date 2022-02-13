@@ -2,10 +2,11 @@
 
 如今有很多辅助工具可以帮助我们更好地完成\LaTeX{}文档.
 
-\section{Typora}
+\section{MathJax}
 
-Typora是一个``所见即所得''MarkDown编辑器(\url{https://typora.io}), 特别是很好地配合MathJax显示\LaTeX{}公式.
-平时可以先用这个软件写一点片段, 若能正确展示, 再复制到\TeX{}文件中, 可以提高文本编写效率.
+有些``所见即所得''MarkDown编辑器能很好地配合MathJax显示\LaTeX{}公式.
+平时可以先用此类软件写一些片段, 若能正确展示, 再复制到\TeX{}文件中, 这样文本编写效率会更高.
+例如Typora(\url{https://typora.io})和Mark Text(\url{https://marktext.app})
 
 \section{Microsoft Math Solver}
 
@@ -16,3 +17,15 @@ Microsoft Math Solver(``微软数学'')这款APP的主要功能是求解数学�
 对于数据量较大的表格, 可以寻找转换工具(也有很多在线版本), 会节约很多时间.
 
 另外, 实验数据最好由编程语言提供的软件包转换.
+
+\section{PDF代换法}
+
+如果使用其他软件绘制的图表, 可以转换成PDF文件再以图片形式统一包含, 这样可以节约不少时间.
+例如:
+\begin{Verbatim}
+\begin{table}[h]
+    \centering
+    \includegraphics[width=.8\textwidth]{table.pdf}
+    \caption{形为表格实为图片}
+\end{table}
+\end{Verbatim}
