@@ -2,7 +2,7 @@
 
 
   一般采用浮动的表格, 以选项\texttt{[!htbp]}标记, 注意表格不能写``如下所示''
-要写``如\ref{table:trilogy}所示''.
+要写``如\ref{tab:trilogy}所示''.
 
 
   表\ref{tab:trilogy}使用了单元格不同位置的标记(例如\texttt{c}/\texttt{l}/\texttt{r}标记).
@@ -26,8 +26,6 @@
 
 \begin{table}[!htb]
 \centering
-  \caption{主表}
-  \label{tab:number}
 \begin{subtable}[t]{2in}
   \centering
   \begin{tabular}{|l|l|l|l|}
@@ -51,12 +49,14 @@
   \end{tabular}
   \caption{子表(二进制)}\label{tab:number:b}
 \end{subtable}
+\caption{主表}
+\label{tab:number}
 \end{table}
 
-最好要把每一页填满, 这样排版问题会少很多.
+最好要把每一页填满, 这样排版问题会少很多(例如调节图片的大小).
 
-\begin{table}[h]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=.8\textwidth]{books.jpg}
+    \includegraphics[width=.75\textwidth]{books.jpg}
     \caption{算法三部曲}
-\end{table}
+\end{figure}

@@ -20,3 +20,10 @@
     \begin{center}
       \LARGE#2{}#1
     \end{center}}
+
+\captionsetup[figure]{labelfont=small,textfont=small,singlelinecheck=off,justification=centering,labelformat=simple,labelsep=quad}
+\captionsetup[subfigure]{labelfont=footnotesize,textfont=footnotesize,singlelinecheck=off,justification=centering,labelformat=simple,labelsep=quad}
+\captionsetup[table]{labelfont=small,textfont=small,singlelinecheck=off,justification=centering,labelformat=simple,labelsep=quad}
+\captionsetup[subtable]{labelfont=footnotesize,textfont=footnotesize,singlelinecheck=off,justification=centering,labelformat=simple,labelsep=quad}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+\renewcommand\thesubtable{(\alph{subtable})}
