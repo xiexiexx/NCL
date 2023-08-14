@@ -1,4 +1,5 @@
 \chapter{引用}
+\label{chapter_ref}
 
 最常见的引用是参考文献的引用. 例如参考文献\cite{SX}的标记为\verb=SX=(也即\verb=\bibitem{SX}=), 
 于是我们可以使用\verb=\cite{SX}=实现引用参考文献\cite{SX}的效果, 
@@ -6,13 +7,14 @@
 
 引用需要排次序, 所以需要两次编译, 第1次识别所有的标记并编号, 第2次将编号填入并显示. 
 
-其他引用一般使用\verb=label=给出标记, 再用\verb=ref=命令引用. 
-例如以\verb=\label{eq:log_factorial}=给出公式标记\verb=eq:log_factorial=, 
-再用\verb=\ref{eq:log_factorial}=引用得到\ref{eq:log_factorial}. 
+常规引用一般使用\verb=label=给出标记(可理解为命名), 再通过\verb=ref=命令引用从而自动获得编号. 
+例如我们以\verb=\label{fig:algorithm}=给出某图的标记\verb=fig:algorithm=, 
+再用\verb=\ref{fig:algorithm}=引用即可得到该图的编号(此处为\ref{fig:algorithm}). 
 为了区别不同的标记, 可用前缀配合冒号区分: 公式的前缀\verb=eq=, 图的前缀\verb=fig=, 表的前缀\verb=tab=.
 列举如下:
 \begin{itemize}
-    \item 公式标记为\verb=eq:log_factorial=, 也即公式\ref{eq:log_factorial}.
     \item 图标记为\verb=fig:books=, 也即图\ref{fig:books}.
     \item 表标记为\verb=tab:trilogy=, 也即表\ref{tab:trilogy}.
+    \item 公式标记为\verb=eq:log_factorial=, 也即公式\ref{eq:log_factorial}. 不过公式一般采用\texttt{eqref}命令, 这样可以在编号两侧加上括号, 例如``公式\eqref{eq:log_factorial}'', 也可自定其他格式.
+
 \end{itemize}
