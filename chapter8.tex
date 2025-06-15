@@ -6,15 +6,19 @@
 
 有些``所见即所得''MarkDown编辑器能很好地配合MathJax显示\LaTeX{}公式.
 平时可以先用此类软件写一些片段, 若能正确展示, 再复制到\TeX{}文件中, 这样文本编写效率会更高.
-例如Mark Text(\url{https://github.com/marktext/marktext})或Typora(\url{https://typora.io}).
+实际上, 如今Visual Studio Code内置的MarkDown预览功能已经相当强大(使用的KaTeX与MathJax略有区别),
+而且是免费的.
+之前我们推荐过Typora(\url{https://typora.io})或Mark Text(\url{https://github.com/marktext/marktext}), 大家也可以使用.
 
-\section{Microsoft Math Solver}
+\section{公式识别}
 
-Microsoft Math Solver(``微软数学'')这款APP的主要功能是求解数学问题, 但是我们可以用来处理复杂的公式, 在平板上手写识别后可以复制\LaTeX{}源代码.
+目前能够识别公式并转换成\LaTeX{}源代码的工具很多, 其功能也在不断完善. 在网络上随手一搜就能找到.
+
+\CJKsout*[format=\color{red}]{Microsoft Math Solver(``微软数学'')这款APP的主要功能是求解数学问题, 但是我们可以用来处理复杂的公式, 在平板上手写识别后可以复制\LaTeX{}源代码(识别能力只能说是勉强可用). 不过很遗憾, 这款APP已经下架.}
 
 \section{表格自动转换}
 
-对于数据量较大的表格, 可以寻找转换工具(也有很多在线版本), 会节约很多时间.
+对于数据量较大的表格, 可以寻找转换工具(也有很多在线版本), 处理起来会节约很多时间.
 
 另外, 实验数据最好由编程语言提供的软件包转换, 如果能获得\texttt{csv}文件可用\texttt{csvsimple}宏包自动根据该文件生成表格.
 
